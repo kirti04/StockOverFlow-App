@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_navigation_back"
+        app:theme="@style/ToolBarStyle"
+        app:title="@string/detail_screen_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/avatar_image_view"
+            android:layout_width="@dimen/avatar_image_view_width"
+            android:layout_height="@dimen/avatar_image_view_height"
+            android:contentDescription="@string/user_avatar_content_desc"
+            tools:srcCompat="@tools:sample/avatars[1]" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/general_layout_margin">
+
+            <TextView
+                android:id="@+id/text_user_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:text="Id: 233444"
+                android:textSize="@dimen/detail_text_size" />
+
+            <TextView
+                android:id="@+id/user_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_user_id"
+                android:layout_marginTop="@dimen/general_layout_margin"
+                android:ellipsize="end"
+                android:fontFamily="cursive"
+                android:maxLines="1"
+                android:textSize="@dimen/detail_text_size"
+                tools:text="UserName: Dan234334423423444" />
+
+            <TextView
+                android:id="@+id/user_reputation_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_name_text"
+                android:layout_marginTop="@dimen/general_layout_margin"
+                android:fontFamily="cursive"
+                android:textSize="@dimen/detail_text_size"
+                tools:text="Reputation: 2" />
+
+
+            <LinearLayout
+                android:id="@+id/badges_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_reputation_text"
+                android:layout_marginTop="@dimen/general_layout_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/gold_badges_text"
+                    android:layout_width="@dimen/badge_text_width"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    tools:text="Gold: 1" />
+
+                <TextView
+                    android:id="@+id/silver_badges_text"
+                    android:layout_width="@dimen/badge_text_width"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    tools:text="Silver: 0" />
+
+                <TextView
+                    android:id="@+id/bronze_badges_text"
+                    android:layout_width="@dimen/badge_text_width"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    tools:text="Bronze: 1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/user_location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/badges_linear_layout"
+                android:layout_marginTop="@dimen/detail_screen_section_margin"
+                android:textSize="@dimen/detail_text_size"
+                tools:text="Location: Mars" />
+
+            <TextView
+                android:id="@+id/user_creation_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_location_text"
+                android:layout_marginTop="@dimen/general_layout_margin"
+                android:textSize="@dimen/detail_text_size"
+                tools:text="Created on: 23/11/2018" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_creation_date_text"
+                android:layout_marginTop="@dimen/general_layout_margin"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_block"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/general_layout_margin"
+                    android:fontFamily="cursive"
+                    android:text="BLOCK" />
+
+                <Button
+                    android:id="@+id/btn_follow"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/general_layout_margin"
+                    android:fontFamily="cursive"
+                    android:text="FOLLOW" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
